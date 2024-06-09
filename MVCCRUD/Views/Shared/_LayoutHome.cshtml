@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Home</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <strong>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</strong>
+                        </li>
+                        <li class="nav-item active">
+                            <strong>@Html.ActionLink("Update Profile", "UpdateUser", "Home", new { area = "" }, new { @class = "nav-link" })</strong>
+                        </li>
+                        <li class="nav-item">
+                            <strong>@Html.ActionLink("Change Password", "ChangePassword", "Home", new { area = "" }, new { @class = "nav-link" })</strong>
+                        </li>
+                        <li class="nav-item">
+                            <strong>@Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "nav-link" })</strong>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="bg-body-tertiary text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2024 Copyright:
+                <a class="text-body" href="https://localhost:44345/">crud.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
